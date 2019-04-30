@@ -1,0 +1,149 @@
+/*=================== FOOTER SECTION ================== */
+
+footer {
+    min-width: 375px;
+    margin-top: 60px;
+    width: 100%;
+    /*padding-left: 10%;*/
+    /*padding-right: 10%;*/
+    background-image: linear-gradient(transparent 40%, #FFE5CD);
+    /*background-color: #ffd9b8;*/
+}
+
+#footerwrapper {
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 70%;
+}
+
+.footerInfo {grid-column: 1/2}
+.socialmedia {grid-column: 2/3}
+.footerUndersider {grid-column: 3/4}
+.aabningstider {grid-column: 4/5}
+
+
+
+
+.footerUndersider a, .aabningstider li {
+    text-align: center;
+    display: block;
+    color: black;
+    margin: 10px 0;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.aabningstider ul li {
+    text-align: center;
+    display: block;
+    color: black;
+    margin: 10px 0;
+    border-radius: 4px;
+    padding: 3px;
+    text-align: left;
+}
+
+.footerUndersider a{
+    width: 100px;
+}
+
+.aabningstider li {
+    width: 200px;
+}
+
+.socialmedia img {
+    position: relative;
+    margin: 10px;
+}
+
+.socialmedia a{
+    position: relative;
+    color: black;
+}
+
+.socialmedia a::after {
+    position: absolute;
+    border-radius: 4px;
+    padding: 3px;
+    left: 60px;
+    top: -30px;
+    content: attr(data-descr);
+}
+
+#p1 {
+    display: none;
+    grid-column: 2/4;
+}
+
+#p2 {
+    display: none;
+    grid-column: 4/6;
+}
+
+
+/* =================== TABLET & SMALL SCREEN SECTION ==================*/
+@media only screen and (max-width: 1200px) {
+    #footerwrapper {
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 90%;
+    }
+  }
+
+  /* =================== MOBILE SECTION ==================*/
+  @media only screen and (max-width: 800px) {
+
+      #footerwrapper {
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+      }
+
+      #p1, #p2 {
+          display: block;
+      }
+      #footerwrapper .socialmedia {
+          grid-column: 2/4;
+      }
+      #footerwrapper .aabningstider {
+          grid-column: 4/6;
+      }
+      .aabningstider li {
+          width: 150px;
+      }
+
+      #footerwrapper .footerInfo {
+          display: none;
+      }
+      #footerwrapper .footerUndersider {
+          display: none;
+      }
+
+
+    .socialmedia a::after {
+        display: none;
+    }
+  }
+
+@media only screen and (max-width: 550px) {
+    #footerwrapper {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    #footerwrapper .socialmedia {
+        grid-column: 1/2;
+    }
+    #footerwrapper .aabningstider {
+        grid-column: 2/4;
+    }
+
+    #p1 {
+        display: block;
+        grid-column: 1/2;
+    }
+
+    #p2 {
+        display: block;
+        grid-column: 2/4;
+    }
+}

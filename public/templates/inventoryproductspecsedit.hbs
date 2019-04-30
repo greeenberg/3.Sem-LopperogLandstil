@@ -1,0 +1,55 @@
+<div class="inventory_product_outer">
+    <div class="save_exit" id="save_exit">
+        <button id="save" class="save_exit_button"><img class="edit_icons" src="../imgs/save.png"></button>
+        <button id="exit" class="save_exit_button"> <img class="edit_icons" src="../imgs/crosslogo.png"> </button>
+        <span id="edit_status"></span>
+    </div>
+    {{#if product.pictures}}
+        <div class="main-product-picture">
+            <div class="main-product-bigPictureBox">
+                <img id="main-product-bigPicture" src="/uploads/{{product.pictures.[0]}}.jpg" class="inventory_product_image">
+            </div>
+            <br>
+            <div class="main-product-mini-container">
+                {{#each product.pictures}}
+                    <img src="/uploads/{{this}}.jpg" class="main-product-mini" onclick="pictureFunction(this);">
+                {{/each}}
+            </div>
+        </div>
+    {{else}}
+        <div class="no_image_found">
+            Intet Billede Uploaded
+        </div> <br>
+    {{/if}}
+
+    <label for="Inventory_product_upload"><b>Upload Billede: </b> <input id="Inventory_product_upload" type="file" multiple></label> <br> <br>
+
+
+    <label><b>Produkt navn: </b><input type="text" id="inventory_product_edit_name" value="{{product.name}}"></label><br> <br>
+    <label><b>Produkt beskrivelse: </b><br><textarea id="inventory_product_edit_description" rows="8" cols="48">{{product.description}}</textarea></label><br> <br>
+
+
+    <span class="inventory_product_info"><b>Sidst opdateret:</b></span> {{product.updated}} <br> <br>
+    <span class="inventory_product_info"><b>Oprettet:</b></span> {{product.created}} <br> <br>
+
+    <label><b>Antal på lager: </b><input type="number" id="inventory_product_edit_amount" value="{{product.amount}}"></label><br> <br>
+    <label><b>Antal Produkter reserveret: </b><input type="number" id="inventory_product_edit_reservedamount" value="{{product.reservedAmount}}"></label><br> <br>
+
+    <label for="inventory_product_edit_unique"><b>Er produkt unik: </b> <input type="checkbox" id="inventory_product_edit_unique" {{#if product.unique}} checked {{/if}}> </label> <br> <br>
+    <label><b>Kategorier: </b>
+        <select id="categories_input">
+
+        </select>
+    </label>
+    <button id="categories_add">+</button>
+    <button id="categories_remove">-</button>
+    <br> <br>
+    <ul id="inventory_product_edit_categories">
+        {{#each product.categories}}
+            <li id="individual_category_{{this}}">{{this}}</li>
+        {{/each}}
+    </ul>
+    <label><b>Pris: </b><input type="number" id="inventory_product_edit_price" value="{{product.price}}"></label><br> <br>
+    <label><b>Rabat: </b><input type="number" id="inventory_product_edit_discount" value="{{product.discount}}"></label><br> <br>
+
+</div>

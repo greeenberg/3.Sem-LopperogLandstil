@@ -1,0 +1,124 @@
+
+
+body {
+    margin: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fffafa;
+}
+
+.navbar {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: peru;
+    padding: 1ch;
+}
+
+.inventory_tabledata {
+    border: 1px rgba(130,130,131,0.62) solid;
+    border-collapse: collapse;
+    padding: 1ch;
+    /*cursor: pointer;*/
+}
+
+.inventory_tabledata_num, .inventory_tabledata_edit{
+    border: 1px rgba(130,130,131,0.62) solid;
+    border-collapse: collapse;
+    padding: 1ch;
+    /*cursor: pointer;*/
+    text-align: right;
+}
+
+#inventory_table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+img {
+    width: 100%;
+}
+
+
+#link_to_front {
+    background-color: #4CAF50;
+    height: content-box;
+    width: content-box;
+    font-size: large;
+    border-radius: 7%;
+}
+
+table.inventory_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.inventory_tablerow_header {
+    background-color: #4CAF50;
+    height: 4em;
+}
+
+#inventory_table_reservedamount {
+    white-space: nowrap;
+}
+
+.inventory_product_outer {
+    /*position: fixed;*/
+    /*width: 25%;*/
+    border-collapse: collapse;
+}
+
+span.headertext {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: x-large;
+}
+
+div.inventory_middle {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-collapse: collapse;
+}
+
+
+div.inventory_main {
+    border: 2px #19530b solid;
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 100%;
+    float: left;
+}
+
+div.inventory_specs {
+    padding: 2px;
+    position: fixed;
+    left: calc(75% + 2px);
+    border: 2px #19530b solid;
+    width: 24%;
+    max-height: 90%;
+    float: right;
+    background-color: #f2f2f2;
+    overflow-y: scroll;
+}
+
+.inventory_product_image {
+    margin: 2px;
+    border: #555555 2px solid;
+    width: calc(100% - 8px);
+}
+.no_image_found {
+    margin: 2px;
+    padding: 2ch;
+    text-align: center;
+    font-size: xx-large;
+    border: 2px #19530b solid;
+    border-collapse: collapse;
+    height: 3em;
+    left: 0;
+}
+.edit_icons {
+    max-height: 40px;
+    max-width: 40px;
+    cursor: pointer;
+}
+
+.save_exit {
+    margin: 2px;
+}

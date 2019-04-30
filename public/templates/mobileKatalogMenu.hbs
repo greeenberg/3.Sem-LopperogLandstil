@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        <li><a href="katalog.html"><p>Alle produkter</p></a></li>
+        <li><a href="katalog.html?{{this}}"><p>Special varer - virker ikke</p></a></li>
+        <!--en extra til Special varer-->
+        <li><a href="katalog.html?{{this}}"><p>Tilbud - virker ikke</p></a></li> <!--en extra til tilbud-->
+        {{#each kategori}}
+            <li><a href="katalog.html?{{this}}"><p>{{this}}</p></a></li>
+        {{/each}}
+    </ul>
+</div>

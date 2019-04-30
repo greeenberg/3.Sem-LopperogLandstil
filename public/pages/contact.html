@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kontakt</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/contactStyle.css">
+    <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+    <script src="scripts/navigationScript.js"></script>
+    <script src="scripts/footerScript.js"></script>
+    <script src="scripts/mobileFooterAnimation.js"></script>
+    <script src="scripts/contactScript.js"></script>
+</head>
+<body>
+
+<!--header-->
+<div class="headerimage-contact"></div>
+<div id="navbar">
+
+</div>
+
+<nav id="fixedMenu"></nav>
+<!--content-->
+<div id="content">
+    <div id="title"><h1>Kontakt Lopper og landstil</h1></div>
+
+
+
+
+
+    <div class="middle">
+        <p class="middleText">Kjeldbækvej 1, Ørting<br>
+            8300 Odder<br>
+            Tlf. 41 60 46 49 <br>
+            E-mail. info@lopperoglandstil.dk <br> <br>
+        </p>
+        <div class="middleText">
+            <p><a class="textMap" href="https://goo.gl/maps/o1ueVUvwodH2">Google maps</a></p>
+        </div>
+
+
+    </div>
+
+    <div class="wide">
+        <div class="mapInfo">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.2964836190695!2d10.160447116093636!3d55.92689798601839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c5cf05570494d%3A0x8af7911d34e5c9c2!2sLopper+%26+Landstil!5e0!3m2!1sda!2sdk!4v1544474717606" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="whole"><div class="subtitle"><h2>Har du spørgsmål eller vil du høre mere omkring vores begivenheder? <br>Send en besked!</h2></div>
+        <div class="wholeContent">
+
+            <!--<h2 class="minititle">Bliv kontaktet af Lopper & Landstil</h2>-->
+            <label class="contact" for="contact_name">Dit Navn *<br><input id="contact_name" type="text" class="contact_info"></label><br>
+            <label class="contact" for="contact_mail">Din E-Mail *<br><input id="contact_mail" type="email" class="contact_info"></label><br>
+            <label class="contact" for="contact_phone">Dit telefonnummer<br><input id="contact_phone" class="contact_info"></label><br>
+            <label class="contact" for="contact_message" >Din Besked *<br><textarea id="contact_message"></textarea> </label><br>
+            <p class="smallText"> felter med * skal udfyldes, telefonnr. bør kun udfyldes hvis du ønsker at blive ringet op for nærmere information</p>
+            <button id="button_submit">Send</button>
+            <span id="contact_status"></span>
+        </div>
+    </div>
+
+    <p class="middle">
+        Vi glæder vi os til at se jer hos Lopper & Landstil!
+    </p>
+
+
+</div>
+
+
+<!--footer-->
+<footer id="footer"></footer>
+</body>
+</html>

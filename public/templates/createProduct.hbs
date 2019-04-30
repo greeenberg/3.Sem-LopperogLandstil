@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj Produkt</title>
+    <link rel="stylesheet" type="text/css" href="/css/createStyle.css">
+    <script src="/scripts/createProduct.js"></script>
+</head>
+<body>
+<<nav class="container">
+    <div class="navLinks"><a href="/admin/visProdukt">Vis Produkter</a></div>
+    <div class="navLinks"><a href="/admin/createProduct">Opret Produkt</a></div>
+</nav>
+
+<div class="createContent">
+    <div id="nameHolder"><input id="name" placeholder="Indtast Navn"></div>
+    <div id="priceHolder"><input id="price" type="text" placeholder="Pris"></div>
+    <div id="amountHolder"><input id="amount" type="number" placeholder="Antal"></div>
+    <div id="descriptionHolder"> <textarea rows="4" cols="25" id="description" placeholder="evt. Beskrivelse"></textarea> </div>
+    <div id="picHolder">
+        <input class="chosenPicture" type="file" name="product" accept="image/*" required/>
+    </div>
+    <div id="buttonHolder">
+    <button id="addInputFile" type="button">+</button>
+    </div>
+    <div id="categoryHolder"><label><b>Kategorier: </b><select id="categories_input" required>
+    </select><input type="button" id="category_add" value="+"></label>
+    <ul id="category_list">
+        {{#each product.categories}}
+            <li class="categorylistelem" value="{{this}}" id="{{this}}">{{this}}</li>
+        {{/each}}
+    </ul>
+    </div>
+    <div id="submitHolder"><input id="submit" type="submit" value="Opret"></div>
+    <div id="uniqueHolder">Unik Vare<input id="unique" type="checkbox" placeholder ="Unik Vare">  </div>
+
+    <div id="createCatContainer">
+        <div id="header">Opret Kategori</div>
+        <div id="categoryInput"> <input id="categoryNameField" type="text" placeholder="kategori Navn"></div>
+        <div id="categoryButtonHolder"><input id="submitCategory" type="submit" value="Opret"/></div>
+
+        <div id="header_delete">Slet kategori</div>
+        <div id="cat_delete_holder">
+            <label><select id="category_delete" required>
+
+            </select>
+                <input type="button" id="category_delete_button" value="delete"/></label>
+        </div>
+    </div>
+</div>
+
+<a href="/admin/logout"> log ud</a>
+
+
+</body>
+</html>

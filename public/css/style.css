@@ -1,0 +1,476 @@
+:root {
+  font-size: 16px;
+}
+@import url('https://fonts.google.com/css?family=Noto+Sans');
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+body {
+  font-family:'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fffafa;
+}
+
+/* =================== INDEX SECTION ================== */
+
+#content {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 0.7fr 5px [start] 1fr 1fr 1fr [end] 5px 0.7fr;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-block-start: 2em;
+}
+
+.social {
+  grid-column: start/end;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.social .left, .social .right{
+  min-width: 340px;
+}
+
+#content .instagram-media {
+  /*grid-column: 5/6*/
+}
+
+
+
+
+  /* =================== TABLET & SMALL SCREEN SECTION ==================*/
+@media only screen and (max-width: 1200px) {
+  :root { font-size: 14px; }
+
+  #content {
+    grid-template-columns: auto 20px [start] 1fr 1fr 1fr [end] 20px auto;
+  }
+
+}
+
+/* =================== MOBILE SECTION ==================*/
+@media only screen and (max-width: 800px) {
+
+  #content {
+    grid-template-columns: auto 5px [start] 1fr 1fr 1fr [end] 5px auto;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+}
+
+#content #title{
+  grid-column: start / end;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  padding: 0 0 4px;
+  color: rgb(27, 27, 27);
+}
+
+.subtitle{
+  grid-column: start / end;
+  font-size: 1.3em;
+  color: rgba(27, 27, 27, 0.9);
+}
+
+#content .wide{ grid-column: start / end; }
+#content .left{ grid-column: start / 4; }
+#content .middle{ grid-column: 4 / 5; }
+#content .right{ grid-column: 5 / end; }
+#content .spanleft{ grid-column: start / 5; }
+#content .spanright{ grid-column: 4 / end;}
+#content .whole {
+  grid-column: 1/8;
+  background-color: #eecbad;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#content > .middle > .middleText {
+  text-align: center;
+}
+
+#content .whole .wholeContent {
+  grid-column: start/end;
+}
+
+#content .whole .wholeContent label {
+  align-content: baseline;
+}
+#content .whole .wholeContent textarea {
+  min-width: 80%;
+  min-height: 200px;
+}
+
+#content > .whole > .wholeContent > .smallText {
+  font-size: small;
+  padding-bottom: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#content p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: left;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+#content img{
+  object-fit: cover;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px #fff;
+}
+
+/* =================== KATALOG SECTION ================== */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  width: 100%;
+  grid-gap: 10px;
+}
+
+#products {
+  grid-column: 2/8;
+  width: 100%;
+  background-color: #fffafa;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.product-menu {
+  grid-column: 1/2;
+}
+
+.product-menu h2 {
+  padding-left: 5%;
+}
+
+#menu-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 5%;
+}
+
+#menu-content li {
+  text-decoration: none;
+  border-bottom: 1px black solid;
+}
+
+#menu-content li a {
+  display: block;
+  color: #333333;
+  margin: 0;
+  padding: 10px 0 0 0;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: larger;
+  text-decoration: none;
+}
+
+#menu-content li a:hover {
+  background-color: lightgray;
+}
+
+#menu-content li a:active {
+  background-color: sandybrown;
+  color: white;
+}
+
+#menu-content li a p {
+  padding-left: 5%;
+  margin: 0;
+}
+
+.products-content {
+  min-width: 250px;
+  margin: 15px;
+  border: 1px #dddddd solid;
+}
+
+.product-picturebox{
+  width: 95%;
+  margin: 2.5%;
+  height: 180px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-picture {
+  height: 180px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0px;
+  font-size: 16px;
+  /*z-index: +1;*/
+  background: rgba(255,255,255,0.5);
+  width: 100%;
+  height: 23%;
+  text-align: left;
+  padding-left: 5.5%;
+  overflow: hidden;
+  margin-left: -2.5%;
+}
+
+.product-name {
+  margin-top: 5px;
+  color: black;
+}
+
+.products-price-reservation {
+  display: table;
+  width: 100%;
+  margin-top: 3%;
+  /*padding: 5px 5% 5px 5%;*/
+  border-top: 1px #dddddd solid;
+  min-height: 60px;
+}
+
+.products-price-reservation div {
+  display: table-cell;
+  width: 33.33%;
+  text-align: center;
+}
+
+.price {
+  margin-left: 5px;
+  font-size: large;
+}
+
+.discount {
+  text-decoration:  line-through;
+  color: gray;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.reservation {
+  padding: 5px 15px 5px 15px;
+  background: linear-gradient(transparent 35%, #B3A38F), #eedfcc;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.reservation:hover, .reservation:active {
+  background: linear-gradient(transparent 35%, #807466), #E6CFB1;
+}
+
+.bigReservation {
+  padding: 10px 15px 10px 15px;
+  background: linear-gradient(transparent 35%, #B3A38F), #eedfcc;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #000000;
+}
+.bigReservation:hover, .bigReservation:active {
+  background: linear-gradient(transparent 35%, #807466), #E6CFB1;
+}
+
+#mobile-menu-content {
+  display: none;
+}
+
+#mobile-menu-content > div {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .product-menu {
+    display: none;
+    grid-column: 1/1;
+  }
+  .products {
+    grid-column: 2/8;
+  }
+
+  #mobile-menu-content {
+    position: fixed;
+    display: block;
+    background: url("/imgs/arrow.png") no-repeat;
+    background-size: 100%;
+    left: 10px;
+    top: 45%;
+    width: 52px;
+    height: 10%;
+    transition: left 0.5s;
+    z-index: +1;
+  }
+
+  #mobile-menu-content:hover {
+    /*left: 250px;*/
+  }
+
+  #mobile-menu-content > div {
+    visibility: visible;
+    position: fixed;
+    min-height: 200px;
+    height: 100vh;
+    width: 250px;
+    left: -270px;
+    top: 0px;
+    background-color: #dccdcc;
+    text-align: center;
+    transition: left 0.5s;
+  }
+
+  #mobile-menu-content > div > h1 {
+    margin-top: 40px;
+    font-size: larger;
+  }
+
+  #mobile-menu-content:hover > div {
+    left: -10px;
+  }
+
+  #mobile-menu-list {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  #mobile-menu-list > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px gray solid;
+  }
+  #mobile-menu-list > li > a{
+    text-decoration: none;
+
+  }
+  #mobile-menu-list > li > a > p {
+    margin: 0;
+    color: #000000;
+  }
+
+}
+
+/* =================== PRODUCT SECTION ================== */
+
+#product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  width: 100%;
+  grid-gap: 10px;
+}
+
+#product-container .main-product-picture {
+  min-height: 300px;
+  grid-column: 1/2;
+  text-align: center;
+}
+
+#product-container .main-product-info {
+  grid-column: 2/3;
+}
+
+#main-product-bigPictureBox {
+  width: 90%;
+  height: 450px;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+#main-product-bigPicture {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.main-product-mini-container {
+  display: table;
+  margin: auto;
+  width: 70%;
+}
+
+.main-product-mini {
+  width: 15%;
+  padding: 1%;
+  opacity: 0.6;
+}
+.main-product-mini:hover {
+  opacity: 0.9;
+}
+
+.main-product-description {
+  width: 70%;
+}
+
+.main-product-description div {
+  padding-top: 20px ;
+}
+
+.main-product-price {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0;
+}
+.main-product-status {
+  font-size: 13px;
+  color: gray;
+}
+
+#product-container p {
+  white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  #product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    width: 100%;
+    grid-gap: 10px;
+  }
+  #product-container .main-product-picture {
+    grid-column: 1/4;
+    min-width: 400px;
+  }
+
+  #product-container .main-product-info {
+    grid-column: 2/3;
+    min-width: 400px;
+  }
+
+  #main-product-bigPictureBox {
+    padding-left: 0;
+    height: 300px;
+  }
+
+  .main-product-description {
+    width: 100%;
+  }
+}
+
+/* =================== Contact SECTION ================== */
+
+@media only screen and (max-width: 800px) {
+  .map {
+    display: none;
+  }
+}
+
+.textMap {
+  display: none;
+}

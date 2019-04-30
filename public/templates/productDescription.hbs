@@ -1,0 +1,29 @@
+<div class="main-product-picture">
+    <div id="main-product-bigPictureBox">
+        <img id="main-product-bigPicture" src="/uploads/{{this.pictures.[0]}}.jpg">
+    </div>
+    <br>
+    <div class="main-product-mini-container">
+        {{#each pictures}}
+            <img src="/uploads/{{this}}.jpg" class="main-product-mini" onclick="galleriFunction(this);">
+        {{/each}}
+    </div>
+</div>
+<div class="main-product-info">
+    <div class="main-product-description">
+        <h1>{{name}}</h1>
+        <p class="main-product-price">{{price}} kr.</p>
+        {{#if unique}}
+            <div>
+            <a id="reservation" data-product="{{name}}" href="#" class="bigReservation">Reserver</a>
+            </div>
+        {{/if}}
+        <p class="main-product-status">Antal på lager: {{amount}} stk.</p>
+        <p>{{description}}</p>
+    </div>
+</div>
+
+
+
+
+

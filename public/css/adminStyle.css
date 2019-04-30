@@ -1,0 +1,65 @@
+body{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(210,180,140);
+}
+
+#loginContent{
+    display: grid;
+    grid-gap: 0.5px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1fr auto auto 1fr;
+    text-align: center;
+    /*width: 50%;*/
+    /*margin-block-start: 2em;*/
+}
+
+#loginContent #header{
+    grid-column: 2/4;
+    border-bottom: 1px solid black;
+    font-size: 1em;
+    padding: 0 0 0;
+    line-height: 5px;
+    color: rgb(27, 27, 27);
+}
+
+#loginContent #inputUsername{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    line-height: 50px;
+}
+
+#loginContent #inputPassword{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    line-height: 50px;
+}
+
+#loginContent #inputButton{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: left;
+}
+
+#button{
+    background: #4CAF50;
+    color: white;
+    padding: 8px 18px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+#button:hover{
+    opacity: 0.8;
+}
+
+#loginContent #wrongInput{
+    grid-column: 2/4;
+    grid-row: 4/5;
+    text-align: left;
+}
+#error{
+    color: red;
+}
